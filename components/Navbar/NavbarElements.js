@@ -8,7 +8,7 @@ export const Nav = styled.nav`
     align-items: center;
     padding: 0.5rem calc((100vw - 1000px) / 2);
     z-index: 10;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 `
 
 export const StyledLink = styled.div`
