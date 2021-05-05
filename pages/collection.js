@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Image from 'next/image'
+import Image from 'next/Image';
 import Card from '../components/Card';
 
 const StyledImage = styled(Image)`
@@ -17,7 +17,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3rem;
+    margin: 4rem 0 4rem 0;
 `;
 
 const Profile = styled.div`

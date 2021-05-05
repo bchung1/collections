@@ -12,6 +12,7 @@ const Container = styled.div`
     cursor: pointer;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 `
+
 const StyledImage = styled(Image)`
     border-radius: 4px;
     object-fit: cover;

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/Link'
 
 export const Button = styled.div`
     display: inline-block;
@@ -18,3 +19,13 @@ export const Button = styled.div`
         border: 1px solid ${props => props.theme.primaryColor};
     }
 `
+
+export function ButtonLink({ href, name, className}) {
+    return (
+      <Button className={className}>
+          <Link href={href} passHref>
+            {name}
+          </Link>
+      </Button>
+    )
+  }

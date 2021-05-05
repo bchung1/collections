@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button } from '../components/Buttons'
+import { ButtonLink } from '../components/Buttons'
 
 const Banner = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="hero">
           <h1>Good taste shouldn't be hard to find.</h1>
           <h5>Share your curations in a single place.</h5>
-          <Button>Get Started</Button>
+          <ButtonLink href="/collection" name="Get Started" />
         </div>
       </Banner>
     </div>
