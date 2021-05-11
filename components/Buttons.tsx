@@ -20,7 +20,13 @@ export const Button = styled.div`
     }
 `
 
-export function ButtonLink({ href, name, className}) {
+interface Props {
+  href?: string | undefined,
+  name: string,
+  className?: string
+}
+
+export function ButtonLink({ href, name, className}: Props) {
     return (
       <Button className={className}>
           <Link href={href} passHref>

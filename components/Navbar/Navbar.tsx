@@ -1,6 +1,13 @@
+import styled from 'styled-components'
 import { MenuItems } from './MenuItems'
-import { Nav, LogoLink, NavLink, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
-import { Button } from '../Buttons'
+import Nav from './Nav'
+import NavLink from './NavLink'
+import NavMenu from './NavMenu'
+import NavBtnLink from './NavBtnLink'
+
+const LogoLink = styled(NavLink)`
+  font-size: 1.5rem;
+`
 
 export default function Navbar() {
     return (
@@ -12,9 +19,7 @@ export default function Navbar() {
                         return <NavLink href={item.url} name={item.title} key={item.title} />
                     })
                 }
-                <NavBtn>
-                    <NavBtnLink href="/signin" name="Sign In" />
-                </NavBtn>
+                <NavBtnLink href="/signin" name="Sign In" />
             </NavMenu>
         </Nav>
     )
