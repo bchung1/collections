@@ -7,6 +7,7 @@ import NavBtnLink from './NavBtnLink'
 
 const LogoLink = styled(NavLink)`
   font-size: 1.5rem;
+  padding: 0;
 `
 
 export default function Navbar() {
