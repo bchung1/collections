@@ -16,6 +16,7 @@ model Card {
   collectionId Int
   title String
   href String?
+  image Bytes?
 }
 
 model Collection {

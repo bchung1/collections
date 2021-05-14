@@ -3,7 +3,7 @@ import { MenuItems } from './MenuItems'
 import Nav from './Nav'
 import NavLink from './NavLink'
 import NavMenu from './NavMenu'
-import NavBtnLink from './NavBtnLink'
+import { NavBtnLink, InverseNavBtnLink } from './NavBtnLink'
 
 const LogoLink = styled(NavLink)`
   font-size: 1.5rem;
@@ -20,6 +20,7 @@ export default function Navbar() {
                         return <NavLink href={item.url} name={item.title} key={item.title} />
                     })
                 }
+                <InverseNavBtnLink href="/signup" name="Sign Up" />
                 <NavBtnLink href="/signin" name="Sign In" />
             </NavMenu>
         </Nav>

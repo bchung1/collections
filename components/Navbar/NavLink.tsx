@@ -9,7 +9,7 @@ export const StyledLink = styled.div`
     padding: 0 1rem;
 
     &:hover {
-    color: ${props => props.theme.primaryColor};
+        color: ${props => props.theme.primaryColor};
     }
 `
 
