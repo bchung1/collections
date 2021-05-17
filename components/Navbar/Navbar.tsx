@@ -4,6 +4,10 @@ import Nav from './Nav'
 import NavLink from './NavLink'
 import NavMenu from './NavMenu'
 import { NavBtnLink, InverseNavBtnLink } from './NavBtnLink'
+import { Button } from '../Buttons'
+import {
+    useSession, signIn, signOut
+  } from 'next-auth/client'
 
 const LogoLink = styled(NavLink)`
   font-size: 1.5rem;
@@ -11,6 +15,10 @@ const LogoLink = styled(NavLink)`
 `
 
 export default function Navbar() {
+    const [ session, loading ] = useSession()
+    
+    const auth = (session) ? <Button onClick={() => signOut()}>Sign out</Button> : <Button onClick={() => signIn()}>Sign in</Button>
+
     return (
         <Nav>
             <LogoLink href="/" name="Collections" />
@@ -20,8 +28,7 @@ export default function Navbar() {
                         return <NavLink href={item.url} name={item.title} key={item.title} />
                     })
                 }
-                <InverseNavBtnLink href="/signup" name="Sign Up" />
-                <NavBtnLink href="/signin" name="Sign In" />
+                { auth }
             </NavMenu>
         </Nav>
     )

@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@prisma/client": "2.22.1",
+    "@prisma/client": "^2.22.1",
     "@types/next-auth": "^3.15.0",
     "@types/styled-components": "^5.1.9",
     "next": "10.1.3",
