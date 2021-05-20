@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import { ThemeProvider } from 'styled-components'
 import theme from '../styles/rootTheme'
 import styled from 'styled-components'
+import { Provider as NextAuthProvider } from 'next-auth/client'
 
 const Container = styled.div`
   min-height: 100vh;
@@ -13,13 +14,15 @@ const Container = styled.div`
 
 function MyApp({ Component, pageProps }) {
   return (
-      <ThemeProvider theme={theme}>
-          <Container>
-            <Navbar/>
-            <Component {...pageProps} />
-            <Footer />
-          </Container>
-      </ThemeProvider>
+      <NextAuthProvider session={pageProps.session}>
+        <ThemeProvider theme={theme}>
+            <Container>
+              <Navbar/>
+              <Component {...pageProps} />
+              <Footer />
+            </Container>
+        </ThemeProvider>
+      </NextAuthProvider>
   )
 }
 
